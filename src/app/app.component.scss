@@ -1,0 +1,40 @@
+.hide {
+    display: none;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+p {
+    width: 100%;
+    border: solid 1px #000;
+    box-sizing: border-box;
+}
+
+div button {
+    color: black;
+}
+
+button.boton {
+    background-color: blue;
+    color: white;
+}
+
+#container {
+    background-color: #fff;
+}
+
+#container > #content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+}
+

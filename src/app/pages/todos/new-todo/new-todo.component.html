@@ -1,0 +1,26 @@
+<h1>New Todo</h1>
+<form (submit)="create()">
+    
+    <mat-form-field [appearance]="appearance">
+        <mat-label>Title</mat-label>
+        <input matInput type="text" name="title" [(ngModel)]="todo.title">
+    </mat-form-field>
+
+    <mat-form-field [appearance]="appearance">
+        <mat-label>Description</mat-label>
+        <input matInput type="text" name="description" [(ngModel)]="todo.description">
+    </mat-form-field>
+
+    <mat-form-field [appearance]="appearance">
+        <mat-label>Status</mat-label>
+        <mat-select name="status" [(ngModel)]="todo.status">
+            <mat-option value="">Select an option</mat-option>
+            <mat-option value="new">New</mat-option>
+            <mat-option value="in progress">In Progress</mat-option>
+            <mat-option value="done">Done</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" [disabled]="!todo.title || !todo.description || !todo.status">Create</button>
+    <a mat-flat-button mat-dialog-close>Cancel</a>
+</form>
